@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>表格</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="PC端页面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="统计管理-产值-详情" transform="translate(-1454.000000, -325.000000)" fill-rule="nonzero" stroke="#409EFF">
+            <g id="表格" transform="translate(1454.000000, 325.000000)">
+                <path d="M13.5,5.21393552 L8.83280337,0.5 L1,0.5 C0.723857625,0.5 0.5,0.723857625 0.5,1 L0.5,15 C0.5,15.2761424 0.723857625,15.5 1,15.5 L13,15.5 C13.2761424,15.5 13.5,15.2761424 13.5,15 L13.5,5.21393552 Z" id="Rectangle-9"></path>
+                <polyline id="Path-3" points="8.51843418 0.697089974 8.51843418 5.70010981 13.4281622 5.70010981"></polyline>
+                <rect id="Rectangle-10" fill="#D8D8D8" x="1.5" y="4.5" width="4" height="1"></rect>
+                <rect id="Rectangle-10" fill="#D8D8D8" x="1.5" y="8.5" width="6" height="1"></rect>
+                <rect id="Rectangle-10" fill="#D8D8D8" x="1.5" y="12.5" width="9" height="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

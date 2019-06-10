@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>进度@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="PC端页面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="资料管理-文件-缩略" transform="translate(-376.000000, -961.000000)" fill-rule="nonzero">
+            <g id="侧边栏" transform="translate(340.000000, 97.000000)">
+                <g id="图标" transform="translate(0.000000, 70.000000)">
+                    <g id="进度" transform="translate(36.000000, 794.000000)">
+                        <rect id="矩形" stroke="#409EFF" fill="#FFFFFF" x="0.5" y="0.5" width="15" height="6" rx="3"></rect>
+                        <rect id="矩形" fill="#409EFF" transform="translate(12.828427, 12.828427) rotate(-45.000000) translate(-12.828427, -12.828427) " x="11.8284271" y="9.82842712" width="2" height="6" rx="1"></rect>
+                        <rect id="矩形" fill="#409EFF" x="2" y="2" width="5" height="3" rx="1.5"></rect>
+                        <circle id="椭圆形" stroke="#409EFF" fill="#FFFFFF" cx="9" cy="9" r="4"></circle>
+                        <path d="M6.98388486,7.97508205 C8.30313768,6.0803095 9.64108088,6.0803095 10.9977144,7.97508205" id="路径-3" stroke="#409EFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

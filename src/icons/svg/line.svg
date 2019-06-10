@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>折线</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="PC端页面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="统计管理-产值-详情" transform="translate(-1483.000000, -325.000000)" fill-rule="nonzero" stroke="#409EFF">
+            <g id="折线" transform="translate(1483.000000, 325.000000)">
+                <rect id="Rectangle-8" fill="#D8D8D8" x="0.5" y="15.5" width="13" height="1"></rect>
+                <polyline id="Path-2" stroke-linejoin="round" points="0.0134291356 6.94582317 1.90616823 6.94582317 5.0283837 0.157889201 7.00745133 11.9157797 10.0597012 6.03683444 11.0454264 9.60324692 13.9949848 9.60324692"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

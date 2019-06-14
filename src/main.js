@@ -28,6 +28,8 @@ import './permission'; // permission control
 import * as filters from './filters'; // global filters
 import readState from './utils/readState';
 
+Vue.use(Progress);
+
 Vue.config.productionTip = false;
 Vue.prototype.$echarts = echarts;
 Vue.prototype.$Sortable = Sortable;

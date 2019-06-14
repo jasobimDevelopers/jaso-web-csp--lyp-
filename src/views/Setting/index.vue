@@ -8,7 +8,8 @@
       <node v-if="activeTab === 3"></node>
       <process v-if="activeTab === 4"></process>
       <bids v-if="activeTab === 5"></bids>
-      <testModel v-if="activeTab === 6"></testModel>
+      <check-item-management v-if="activeTab === 6"></check-item-management>
+      <testModel v-if="activeTab === 7"></testModel>
     </div>
   </div>
 </template>
@@ -22,6 +23,7 @@ import Node from './Node';
 import Process from './Process';
 import Bids from './Bids';
 import TestModel from './TestModel';
+import CheckItemManagement from './CheckItemManagement';
 
 export default {
   name: 'Setting',
@@ -31,6 +33,7 @@ export default {
     };
   },
   components: {
+    CheckItemManagement,
     SideBar,
     Department,
     Position,

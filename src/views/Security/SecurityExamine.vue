@@ -625,8 +625,20 @@
               <section style="float: left;margin-top: 2px">复检评分：</section>
               <el-rate disabled show-text v-model="rectificationList.score" style="float: left;"></el-rate>
             </div>
-            <el-button  @click="awardTicket"  v-if="rectificationRecord.currentPage >= rectificationRecord.totalPage && rectificationList.status !== 2" type="primary" style="float: right;margin-bottom: 20px;margin-top: -5px">
-              {{rectificationList.status === 0 ? '整改回复' : '复检回复'}}
+            <!--<el-button  @click="awardTicket"  v-if="rectificationRecord.currentPage >= rectificationRecord.totalPage && rectificationList.status !== 2" type="primary" style="float: right;margin-bottom: 20px;margin-top: -5px">-->
+              <!--{{rectificationList.status === 0 ? '整改回复' : '复检回复'}}-->
+            <!--</el-button>-->
+           <el-button @click="awardTicket"
+                       v-if="rectificationRecord.currentPage >= rectificationRecord.totalPage && rectificationList.status === 0"
+                       :disabled="!rectificationList.rectifyUserIds.indexOf(userMsg.id) > -1"
+                       type="primary" style="float: right;margin-bottom: 20px;margin-top: -5px">
+              {{rectificationList.rectifyUserIds.indexOf(userMsg.id) > -1 ? '整改回复' : '待整改人整改'}}
+            </el-button>
+            <el-button @click="awardTicket"
+                       v-if="rectificationRecord.currentPage >= rectificationRecord.totalPage && rectificationList.status=== 1"
+                       :disabled="rectificationList.createUserId !== userMsg.id "
+                       type="primary" style="float: right;margin-bottom: 20px;margin-top: -5px">
+              {{rectificationList.createUserId === userMsg.id ? '复检回复' : '待复检人复检'}}
             </el-button>
             <div class="pagination-container" v-if="totalSituationNumber2 > 0" style="margin-top: 40px">
               <el-pagination
@@ -1425,18 +1437,7 @@ export default {
       if (e === 'IssuedAndCorrected') {
         getUserTeam({ projectId: this.listQuery.projectId }).then((data2) => {
           if (data2) {
-            getNatureList({ pageSize: 20, pageIndex: -1, projectId: this.listQuery.projectId, natureType: 1 }).then((data) => {
-              if (data) {
-                data.data.forEach((res) => {
-                  this.detailsList.natureId.forEach((res2) => {
-                    if (res2 === res.content) {
-                      this.addRectificationData.natureId += `${res.id},`;
-                    }
-                  });
-                });
-                this.addRectificationData.natureId = this.addRectificationData.natureId.substring(0, this.addRectificationData.natureId.length - 1);
-              }
-            });
+            this.addRectificationData.natureId = this.detailsList.naureIds;
             this.addRectification.pictures = this.detailsList.pictures;
             this.addRectification.checkList = this.detailsList.checkList;
             this.addRectification.checkContent = this.detailsList.checkContent;

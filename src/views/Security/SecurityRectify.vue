@@ -100,7 +100,7 @@
                  :show-close="false"
                  width="380px">
         <div slot="title" style="font-weight: bolder;">
-          <span>质量整改单详情</span>
+          <span>安全整改单详情</span>
           <el-button type="text" style="float: right" @click="resetControlListForm">关闭</el-button>
         </div>
         <hr size="0.1px" style="margin-top: -20px; margin-bottom: 20px;color: #F5F5F5;">
@@ -244,8 +244,20 @@
             <section style="float: left;margin-top: 2px">复检评分：</section>
             <el-rate disabled show-text v-model="detailsList.score" style="float: left;"></el-rate>
           </div>
-          <el-button  @click="awardTicket"  v-if="AwardTicketList.currentPage >= AwardTicketList.totalPage && detailsList.status !== 2" type="primary" style="float: right;margin-bottom: 20px;margin-top: -5px">
-            {{detailsList.status === 0 ? '整改回复' : '复检回复'}}
+          <!--<el-button  @click="awardTicket"  v-if="AwardTicketList.currentPage >= AwardTicketList.totalPage && detailsList.status !== 2" type="primary" style="float: right;margin-bottom: 20px;margin-top: -5px">-->
+            <!--{{detailsList.status === 0 ? '整改回复' : '复检回复'}}-->
+          <!--</el-button>-->
+          <el-button @click="awardTicket"
+                     v-if="AwardTicketList.currentPage >= AwardTicketList.totalPage && detailsList.status === 0"
+                     :disabled="!detailsList.rectifyUserIds.indexOf(userInfo.id) > -1"
+                     type="primary" style="float: right;margin-bottom: 20px;margin-top: -5px">
+            {{detailsList.rectifyUserIds.indexOf(userInfo.id) > -1 ? '整改回复' : '待整改人整改'}}
+          </el-button>
+          <el-button @click="awardTicket"
+                     v-if="AwardTicketList.currentPage >= AwardTicketList.totalPage && detailsList.status === 1"
+                     :disabled="detailsList.createUserId !== userInfo.id "
+                     type="primary" style="float: right;margin-bottom: 20px;margin-top: -5px">
+            {{detailsList.createUserId === userInfo.id ? '复检回复' : '待复检人复检'}}
           </el-button>
           <div class="pagination-container" v-if="totalSituationNumber > 0" style="margin-top: 40px">
             <el-pagination
@@ -310,6 +322,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import { getQualityRectificationList, getReplyList, getCommentList,
   addComment, qualityCheck, qualityCheckAgain } from '@/api/quality';
 // import { questionTicketTypeList } from '@/filters';
@@ -317,6 +330,11 @@ import { getQualityRectificationList, getReplyList, getCommentList,
 
 export default {
   name: 'SecurityRectify',
+  computed: {
+    ...mapGetters([
+      'userInfo',
+    ]),
+  },
   data() {
     const { params: { id } } = this.$route;
     return {

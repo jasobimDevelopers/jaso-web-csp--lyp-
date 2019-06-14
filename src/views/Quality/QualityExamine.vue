@@ -1437,18 +1437,19 @@ export default {
       if (e === 'IssuedAndCorrected') {
         getUserTeam({ projectId: this.listQuery.projectId }).then((data2) => {
           if (data2) {
-            getNatureList({ pageSize: 20, pageIndex: -1, projectId: this.listQuery.projectId, natureType: 0 }).then((data) => {
-              if (data) {
-                data.data.forEach((res) => {
-                  this.detailsList.natureId.forEach((res2) => {
-                    if (res2 === res.content) {
-                      this.addRectificationData.natureId += `${res.id},`;
-                    }
-                  });
-                });
-                this.addRectificationData.natureId = this.addRectificationData.natureId.substring(0, this.addRectificationData.natureId.length - 1);
-              }
-            });
+            // getNatureList({ pageSize: 20, pageIndex: -1, projectId: this.listQuery.projectId, natureType: 0 }).then((data) => {
+            //   if (data) {
+            //     data.data.forEach((res) => {
+            //       this.detailsList.natureId.forEach((res2) => {
+            //         if (res2 === res.content) {
+            //           this.addRectificationData.natureId += `${res.id},`;
+            //         }
+            //       });
+            //     });
+            //     this.addRectificationData.natureId = this.addRectificationData.natureId.substring(0, this.addRectificationData.natureId.length - 1);
+            //   }
+            // });
+            this.addRectificationData.natureId = this.detailsList.naureIds;
             this.addRectification.pictures = this.detailsList.pictures;
             this.addRectification.checkList = this.detailsList.checkList;
             this.addRectification.checkContent = this.detailsList.checkContent;

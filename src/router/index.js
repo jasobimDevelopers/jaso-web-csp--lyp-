@@ -330,15 +330,16 @@ export const asyncRouterMap = [
         title: '质量奖惩',
         roles: ['admin', 'user'],
       },
-    }, {
-      path: 'quality_infrastructure',
-      component: asyncImport('Quality/QualityInfrastructure'),
-      name: 'quality_infrastructure',
-      meta: {
-        title: '基础设置',
-        roles: ['admin', 'user'],
-      },
     },
+    //   {
+    //   path: 'quality_infrastructure',
+    //   component: asyncImport('Quality/QualityInfrastructure'),
+    //   name: 'quality_infrastructure',
+    //   meta: {
+    //     title: '基础设置',
+    //     roles: ['admin', 'user'],
+    //   },
+    // },
       // {
       //   path: 'quality_feedback',
       //   component: asyncImport('ProjectManage'),
@@ -400,15 +401,16 @@ export const asyncRouterMap = [
         title: '安全奖惩',
         roles: ['admin', 'user'],
       },
-    }, {
-      path: 'security_infrastructure',
-      component: asyncImport('Security/SecurityInfrastructure'),
-      name: 'security_infrastructure',
-      meta: {
-        title: '基础设置',
-        roles: ['admin', 'user'],
-      },
     },
+    //   {
+    //   path: 'security_infrastructure',
+    //   component: asyncImport('Security/SecurityInfrastructure'),
+    //   name: 'security_infrastructure',
+    //   meta: {
+    //     title: '基础设置',
+    //     roles: ['admin', 'user'],
+    //   },
+    // },
       // {
       //   path: 'question_feedback',
       //   component: asyncImport('ProjectManage'),
@@ -518,6 +520,42 @@ export const asyncRouterMap = [
       name: 'model_progress',
       meta: {
         title: '模型进度',
+        roles: ['admin', 'user'],
+      },
+    }],
+  },
+  {
+    path: '/measured_data/:id',
+    component: Layout,
+    name: 'measured_data',
+    meta: {
+      basePath: 'measured_data',
+      icon: '测量',
+      title: '实测实量',
+      roles: ['admin', 'user'],
+    },
+    children: [{
+      path: 'measured_data_item',
+      component: asyncImport('MeasuredData/MeasuredDataItem'),
+      name: 'measured_data_item',
+      meta: {
+        title: '测点管理',
+        roles: ['admin', 'user'],
+      },
+    }, {
+      path: 'measured_data_manage',
+      component: asyncImport('MeasuredData/MeasuredDataManage'),
+      name: 'measured_data_manage',
+      meta: {
+        title: '爆点管理',
+        roles: ['admin', 'user'],
+      },
+    }, {
+      path: 'measured_data_paper',
+      component: asyncImport('MeasuredData/MeasuredDataPaper'),
+      name: 'measured_data_paper',
+      meta: {
+        title: '图纸管理',
         roles: ['admin', 'user'],
       },
     }],

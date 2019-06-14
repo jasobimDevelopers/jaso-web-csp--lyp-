@@ -86,7 +86,9 @@
           <el-form-item>
           </el-form-item>
           <el-form-item label="区域名称:" prop="siteDetail">
-            <el-input v-model.trim="areaQuery.siteDetail" placeholder="请输入区域名称"></el-input>
+            <el-input type="textarea" :autosize="{ minRows: 2, maxRows: 4}"
+                      v-model.trim="areaQuery.siteDetail"
+                      placeholder="请输入区域名称。可一次添加多条，如：101,102,103即可一次添加3条。(逗号需切换到英文逗号)"></el-input>
           </el-form-item>
           <el-form-item label="检查项:">
             <el-input value="设备安装" :disabled="true"></el-input>

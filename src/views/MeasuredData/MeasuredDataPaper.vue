@@ -110,6 +110,21 @@ export default {
       }
     },
     handleSave() {
+      if (this.queryList.file.length === 0) {
+        this.$message({
+          type: 'error',
+          message: '请上传图纸！',
+        });
+        return;
+      }
+      if (!this.queryList.paperName) {
+        this.$message({
+          type: 'error',
+          message: '图纸名称不得为空！',
+        });
+        return;
+      }
+      // paperName
       addPaperOfMeasured(this.queryList).then((res) => {
         if (res) {
           this.$message({

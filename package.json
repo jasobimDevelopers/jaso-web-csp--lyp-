@@ -15,7 +15,7 @@
     "@antv/data-set": "^0.8.6",
     "@antv/g2": "^3.0.5-beta.6",
     "@xkeshi/vue-qrcode": "^0.3.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "echarts": "^4.1.0",
     "element-theme": "^2.0.1",
     "element-ui": "^2.3.9",
